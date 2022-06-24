@@ -3,16 +3,18 @@ DOM - Document Object Modul - это интерфейс которой позв�
 из скрипта управлять интерфейсом HTML страницы.
 */
 
-'use strict';
+"use strict";
 
-const btnHandler = () => {
-  console.log('Button is clicked');
-}
+const ul = document.querySelector("ul");
+const li = document.querySelector("li:nth-child(4)");
+const h2 = document.getElementsByTagName("h2");
+const img = document.querySelector("[alt=sea]");
+const [,p] = document.getElementsByClassName("text");
 
-// const [btn] = document.getElementsByTagName('button');
-// const btn = document.getElementById('btn');
-const btn = document.querySelector('.btn + .btn');
-btn.addEventListener('click', btnHandler);
+console.log(ul);
+console.log(li);
+console.log(h2);
+console.log(img);
+console.log(p);
 
-const btns1 = document.getElementsByClassName('btn');
-const btns2 = document.querySelectorAll('.btn');
+const btnHandler = () => {};
