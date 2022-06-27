@@ -1,28 +1,19 @@
 "use strict";
 
-//Области видимости
-/*
-1. Глобальная;
-2. Локальная;
-3. Блочная;
-*/
-
-// Замыкание - это комбинация функции и лексического окружения в котором эта функция была создана.
-// Лексическое окружение - все переменные доступные функция.
-
-let value = 10;
-
-function log() {
-  console.log("function log", value); // 10;
+function createCounter(initial) {
+  let i = initial; //closure
+  return function counter() {
+    i++;
+    return i;
+  };
 }
 
-function wrapper() {
-  let value = 20;
-  console.log("function wrapper", value); // 20
+const counter1 = createCounter(30);
+counter1();
+counter1();
+counter1();
+console.log(counter1());
 
-  log();
-}
+const counter2 = createCounter(100);
+console.log(counter2());
 
-wrapper();
-
-console.log('after', value); // 10
