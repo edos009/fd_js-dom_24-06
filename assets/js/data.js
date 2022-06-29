@@ -11,7 +11,7 @@ const actors = [
     name: "Robert Downey",
     birthdate: "April 4, 1965",
     photo:
-      "https://tr.web.img3.acsta.net/c_310_420/pictures/210/017/21001798_20130426172912097.jpg",
+      "https://www.ed92.org/wp-content/uploads/2021/12/Robert-Downey-Jr.-780x585.jpg",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const actors = [
     name: "Jared Leto",
     birthdate: "December 26, 1971",
     photo:
-      "https://bodysize.org/wp-content/uploads/2017/03/Jared-Leto-300x400.jpg",
+      "https://tr.web.img3.acsta.net/c_310_420/pictures/210/017/21001798_20130426172912097.jpg",
   },
   {
     id: 6,
