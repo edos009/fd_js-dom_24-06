@@ -29,6 +29,14 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1130px;
+  width: 100%;
+
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 #root {
   font-size: 16px;
 }
@@ -59,7 +67,7 @@ a {
   border: 1px solid #000;
 }
 
-.card-photo-wrapper{
+.card-photo-wrapper {
   width: inherit;
   height: 350px;
 
@@ -91,4 +99,94 @@ a {
 
   object-fit: cover;
   object-position: top;
+}
+
+/* ---------------------------------- */
+
+.form {
+  margin-top: 10px;
+
+  text-align: center;
+}
+
+.form [name="text"],
+.form [type="submit"] {
+  display: inline-block;
+  height: calc(2.7rem + 2px);
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #fff;
+  background-clip: padding-box;
+  border-radius: 10px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form [name="text"] {
+  width: 40%;
+
+  border: 2px solid blueviolet;
+
+  background-color: #ccbcff;
+
+  font-weight: 400;
+}
+
+.form [name="text"]::placeholder {
+  color: #fff;
+  opacity: 0.8;
+
+  text-transform: capitalize;
+}
+
+.form [name="text"]:focus {
+  color: #fff;
+  background-color: #ccbcff;
+  border-color: blueviolet;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(39, 0, 64, 0.421);
+}
+
+.form [type="submit"] {
+  width: 13%;
+
+  border: none;
+  margin-left: 10px;
+
+  background-color: blueviolet;
+
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sms {
+  width: 60%;
+  margin: 30px auto 0;
+
+  color: #fff;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.sms p {
+  padding: 10px 0;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+
+  background-color: #ccbcff;
+
+
+}
+
+.sms .add-color-text {
+  background-color: blueviolet;
 }
