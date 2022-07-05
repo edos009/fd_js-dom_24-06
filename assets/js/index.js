@@ -1,40 +1,35 @@
 "use strict";
 
-// const user = {
-//   fname: "Elon",
-//   age: 51,
-//   getName() {
-//     return this.fname;
-//   },
-//   isWife: true,
-//   children: ["ch1", "ch2"],
-//   address: {
-//     country: "USA",
-//     town: "NY",
-//   },
-//   ukrPassport: null,
-//   petty: undefined,
-//   [Symbol("prop symbol")]: "prop symbol",
+// const animal = {
+//   type: "cat",
+//   age: 10,
+//   isMustache: true,
+//   children: ["kitty1, kitty2"],
+//   color: null,
+//   countLives: undefined,
 // };
 
-// const serializationUser = JSON.stringify(user);
-// console.log(serializationUser);
+// console.log(animal);
+// const serializationAnimal = JSON.stringify(animal);
+// console.log(serializationAnimal);
 
-// const deserializationUser = JSON.parse(serializationUser);
-// console.log(deserializationUser);
+// const deserializationAnimal = JSON.parse(serializationAnimal);
+// console.log(deserializationAnimal);
 
-const animal = {
-  type: "cat",
-  age: 10,
-  isMustache: true,
-  children: ["kitty1, kitty2"],
-  color: null,
-  countLives: undefined,
-};
+//Example 1
+const promise1 = fetch('./assets/js/data.json');
+console.log(promise1);
 
-console.log(animal);
-const serializationAnimal = JSON.stringify(animal);
-console.log(serializationAnimal);
+promise1.then((response) => {
+  console.log(response);
+  const dataJson = response.json();
+  console.log(dataJson);
+  dataJson.then((data) => {
+    console.log(data);
+  })
+})
 
-const deserializationAnimal = JSON.parse(serializationAnimal);
-console.log(deserializationAnimal);
+//Example 2
+fetch("./assets/js/data.json")
+  .then((response) => response.json())
+  .then((data) => console.table(data));
