@@ -1,30 +1,16 @@
 "use strict";
 
-// const animal = {
-//   type: "cat",
-//   age: 10,
-//   isMustache: true,
-//   children: ["kitty1, kitty2"],
-//   color: null,
-//   countLives: undefined,
-// };
-
-// console.log(animal);
-// const serializationAnimal = JSON.stringify(animal);
-// console.log(serializationAnimal);
-
-// const deserializationAnimal = JSON.parse(serializationAnimal);
-// console.log(deserializationAnimal);
-
-//Example 2
-// fetch("./assets/js/data.json")
-//   .then((response) => response.json())
-//   .then((data) => console.table(data))
-//   .catch((error) => console.log(error)) //для отловки ошибок
-//   .finally(()=> console.log('finally')); //не зависимо от результата вернет файнали
-
-fetch("./assets/js/data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data.map((item) => item.type).join(", "));
+function imageLoad(pathSrc) {
+  const image = new Image();
+  image.src = pathSrc;
+  return new Promise((resolve, reject) => {
+    image.addEventListener("load", () => resolve(image));
+    image.addEventListener("error", () => reject(new Error("path invalid")));
   });
+}
+
+imageLoad(
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjxJjDanT_SIiRT38UFpOvyGeGZrZgtEGK0A&usqp=CAU"
+)
+  .then((data) => document.body.append(data))
+  .catch((error) => document.body.append(error));
